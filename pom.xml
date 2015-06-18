@@ -11,6 +11,23 @@
         <wsBroadcast.version>1.0.1-SNAPSHOT</wsBroadcast.version>
     </properties>
 
+    <organization>
+        <name>Kevoree Project</name>
+        <url>http://kevoree.org</url>
+    </organization>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <scm>
+        <connection>scm:git:git@github.com:kevoree/java-ws-broadcaster.git</connection>
+        <developerConnection>scm:git@github.com:kevoree/java-ws-broadcaster.git</developerConnection>
+        <url>https://github.com/kevoree/java-ws-broadcaster</url>
+    </scm>
+
     <dependencies>
         <dependency>
             <groupId>org.kevoree</groupId>
@@ -86,6 +103,61 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <licenses>
+        <license>
+            <name>
+                GNU Library or Lesser General Public License (LGPL)
+            </name>
+            <url>http://www.gnu.org/licenses/lgpl.html</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Maxime Tricoire</name>
+            <id>max.tricoire</id>
+            <email>max.tricoire@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <repository>
+            <id>kevoree.oss.release</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>kevoree.oss.snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>kevoree-oss</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>plugin.kevoree-oss</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
