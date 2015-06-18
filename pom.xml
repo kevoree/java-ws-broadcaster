@@ -8,7 +8,7 @@
 
     <properties>
         <kevoree.version>5.2.5</kevoree.version>
-        <wsBroadcast.version>1.0.1-SNAPSHOT</wsBroadcast.version>
+        <wsBroadcast.version>1.0.0</wsBroadcast.version>
     </properties>
 
     <organization>
